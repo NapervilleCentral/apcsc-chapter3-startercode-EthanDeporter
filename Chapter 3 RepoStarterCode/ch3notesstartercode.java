@@ -22,9 +22,12 @@ public static void main (String [] args)
     String word1 = "apple";
     String word2 = "cat";
     String word3 = "dog";
-
+    if (word1.equals(word2))
+        System.out.println("Hey we are the same!");
+/**/
     if(word2.compareTo(word1)<0)//;end a statement BAD BAD simicolen
     {
+        System.out.println(word1.equals(word2));
         System.out.println(word2 +" is before " + word1  );
         System.out.println("and cats are evil" );
     }//ctrl M - will match brackets
