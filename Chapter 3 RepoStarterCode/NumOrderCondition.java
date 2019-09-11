@@ -18,7 +18,7 @@ public class NumOrderCondition
           else if(a<b && b<c){
               System.out.print("increasing");}
           else if(a==b && b==c){
-              System.out.print("Increasing and decreasing");}
+              System.out.print("Neither");}
           else{
               System.out.print("Neither");}}
       else{
@@ -30,6 +30,8 @@ public class NumOrderCondition
               System.out.print("Decreasing");}
           else if(a<b && b<=c){
               System.out.print("Increasing");}
+          else if(a==b && b==c){
+              System.out.println("Both increasing or decreasing");}
           else{
               System.out.print("Neither");}}
    }
