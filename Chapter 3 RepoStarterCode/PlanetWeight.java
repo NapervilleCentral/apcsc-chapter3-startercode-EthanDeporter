@@ -24,7 +24,7 @@ public class PlanetWeight
             case 'E': //if its earth
             case 'e':
                 System.out.println("Your weight on Earth is "+weight+" lbs"); //Prints the weight
-                break;
+                break; //Cuts out of the switch every time break is written
             case 'J':
             case 'j'://Jupiter
                 System.out.println("Your weight on Jupiter is "+(weight*2.528)+" lbs");
