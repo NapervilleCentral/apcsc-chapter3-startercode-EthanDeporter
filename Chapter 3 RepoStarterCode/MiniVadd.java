@@ -20,23 +20,20 @@ public class MiniVadd
         CL = bob.nextInt();
         System.out.println("Master unlock");
         MU = bob.nextInt();
-        System.out.println("Inside or outside doors? (1 for inside 0 for outside)");
-        choice= bob.nextInt();
-        if(choice==1){
-            System.out.println("Inside Left");
-            IL = bob.nextInt();
-            System.out.println("Inside Right");
-            IR = bob.nextInt();
-            OR=0;
-            OL=0;}
-            
-        else{
-            System.out.println("Outside Left");
-            OL = bob.nextInt();
-            System.out.println("Outside Right");
-            OR = bob.nextInt();
-            IR=0;
-            IL=0;}
+        
+        
+        System.out.println("Inside Left");
+        IL = bob.nextInt();
+        System.out.println("Inside Right");
+        IR = bob.nextInt();
+        
+        
+    
+        System.out.println("Outside Left");
+        OL = bob.nextInt();
+        System.out.println("Outside Right");
+        OR = bob.nextInt();
+        
            
         System.out.println("Gear(D, R, P, 1, 2, 3, etc.)");
         G = bob.nextLine();
@@ -48,7 +45,7 @@ public class MiniVadd
             else if(DL==1){
                 System.out.println("left");}
             else{
-                if(choice==1 && CL==0){
+                if(CL==0){
                     if(IL==1 && IR==1){
                         System.out.println("both");}
                     else if(IL==1){
@@ -56,10 +53,7 @@ public class MiniVadd
                     else if(IR==1){
                         System.out.println("right");}
                     else{
-                        System.out.println("neither");}}
-                else if(choice==1 && CL==1){
-                    System.out.println("neither");}
-                else if(choice==0){
+                        System.out.println("neither");}
                     if(OR==1 && OL==1){
                         System.out.println("both");}
                     else if(OR==1){
@@ -68,12 +62,22 @@ public class MiniVadd
                         System.out.println("left");}
                     else{
                         System.out.println("neither");}}
+                else if(CL==1){
+                    System.out.println("neither");}
+                    if(OR==1 && OL==1){
+                        System.out.println("both");}
+                    else if(OR==1){
+                        System.out.println("right");}
+                    else if(OL==1){
+                        System.out.println("left");}
+                    else{
+                        System.out.println("neither");}
                 else{
-                    System.out.println("neither");}}}
+                    System.out.println("neither");}}
         else{
               System.out.println("neither");}
                     
                     
             
-    }
+            }
 }
