@@ -8,36 +8,23 @@ public class MiniVadd
 
     public static void MiniVadd()
     {  
-        Scanner bob = new Scanner(System.in);
-        int DL,DR,CL,MU,IL,IR,OL,OR, choice;
-        String G;
-        System.out.println("For each instance put 0 for false and 1 for true or trying to open.(put driving mode for Gear)");
-        System.out.println("Dashboard Left");
-        DL = bob.nextInt();
-        System.out.println("Dashboard Right");
-        DR = bob.nextInt();
-        System.out.println("Child lock");
-        CL = bob.nextInt();
-        System.out.println("Master unlock");
-        MU = bob.nextInt();
+        Scanner bob = new Scanner(System.in);//Setting up scanner
+        char DL,DR,CL,MU,IL,IR,OL,OR, G;
+        String choice;
+        System.out.println("What is the configuration of your van?");
+        choice=bob.nextLine();
+        DL =choice.charAt(0);
+        DR =choice.charAt(1);
+        CL =choice.charAt(2);
+        MU =choice.charAt(3);
+        IL =choice.charAt(4);
+        IR =choice.charAt(5);
+        OL =choice.charAt(6);
+        OR =choice.charAt(7);
+        G =choice.charAt(8);
         
         
-        System.out.println("Inside Left");
-        IL = bob.nextInt();
-        System.out.println("Inside Right");
-        IR = bob.nextInt();
-        
-        
-    
-        System.out.println("Outside Left");
-        OL = bob.nextInt();
-        System.out.println("Outside Right");
-        OR = bob.nextInt();
-        
-           
-        System.out.println("Gear(D, R, P, 1, 2, 3, etc.)");
-        G = bob.nextLine();
-        if(G.equals("P") && MU==1){
+        if(G=='P' && MU==1){
             if(DR==1 && DL==1){
                 System.out.println("both");}
             else if(DR==1){
@@ -63,7 +50,6 @@ public class MiniVadd
                     else{
                         System.out.println("neither");}}
                 else if(CL==1){
-                    System.out.println("neither");}
                     if(OR==1 && OL==1){
                         System.out.println("both");}
                     else if(OR==1){
@@ -71,9 +57,9 @@ public class MiniVadd
                     else if(OL==1){
                         System.out.println("left");}
                     else{
-                        System.out.println("neither");}
+                        System.out.println("neither");}}
                 else{
-                    System.out.println("neither");}}
+                    System.out.println("neither");}}}
         else{
               System.out.println("neither");}
                     
